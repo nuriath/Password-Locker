@@ -10,8 +10,8 @@ class User:
         self.username = username
         self.password = password
         
-    # def create_contact(email,username,password):
+    def create_contact(email,username,password):
 
-    #     new_contact = User(email,username,password)
+        new_contact = User(email,username,password)
 
 

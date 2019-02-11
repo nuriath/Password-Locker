@@ -27,4 +27,11 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_contact.email,"Queen@gmail.com")
         self.assertEqual(self.new_contact.username,"kingdom")
         self.assertEqual(self.new_contact.phone_number,"jquery2")
-       
+    
+    def test_save_contact(self):
+        '''
+        test_save_contact test case to test if the contact object is saved into
+         the contact list
+        '''
+        self.new_contact.save_contact() # saving the new contact
+        self.assertEqual(len(User.contact_list),1)
