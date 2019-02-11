@@ -4,13 +4,14 @@ class User:
     """
     contact_list = [] 
 
-    def __init__(self,user_name,password):
+    def __init__(self,email,username,password):
 
-        self.user_name = user_name
+        self.email = email
+        self.username = username
         self.password = password
         
-    def create_contact(user_name,password)
+    # def create_contact(email,username,password):
 
-        new_contact = User(user_name,password)
+    #     new_contact = User(email,username,password)
 
 
