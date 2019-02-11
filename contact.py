@@ -8,6 +8,8 @@ class User:
 
         self.user_name = user_name
         self.password = password
+        
+    def create_contact(user_name,password)
 
         new_contact = User(user_name,password)
 
