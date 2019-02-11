@@ -55,7 +55,40 @@ class TestUser(unittest.TestCase):
             self.assertEqual(len(User.contact_list),2)
 
             # More tests above
-    
+    def test_delete_contact(self):
+
+            '''
+            test_delete_contact to test if we can remove a contact from our contact list
+            '''
+            self.new_contact.save_contact()
+            test_contact = User("queen@gmail.com","kingdom","jquery2") # new contact
+            test_contact.save_contact()
+
+            self.new_contact.delete_contact()# Deleting a contact object
+            self.assertEqual(len(User.contact_list),1)  
+
+    def test_find_contact_by_username(self):
+        '''
+        test to check if we can find a contact by username and display information
+        '''
+
+        self.new_contact.save_contact()
+        test_contact = User("queen@gmail.com","kingdom","jquery2") # new contact
+        test_contact.save_contact()
+
+        found_contact = User.find_by_username("kingdom")
+
+        self.assertEqual(found_contact.email,test_contact.email)
+
+    def test_display_all_contacts(self):
+        '''
+        method that returns a list of all contacts saved
+        '''
+
+        self.assertEqual(User.display_contacts(),User.contact_list)
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
