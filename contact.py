@@ -26,8 +26,9 @@ class User:
         contact_list = [] # Empty contact list
         
         # Init method up here
-    def save_contact(self):
+    def save_contact(self): 
 
+        User
         '''
         save_contact method saves contact objects into contact_list
         '''
@@ -63,3 +64,5 @@ class User:
         method that returns the contact list
         '''
         return cls.contact_list       
+
+        

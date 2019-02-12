@@ -1,4 +1,5 @@
 import unittest # Importing the unittest module
+
 from contact import User # Importing the contact class
 
 class TestUser(unittest.TestCase):
@@ -66,6 +67,15 @@ class TestUser(unittest.TestCase):
 
             self.new_contact.delete_contact()# Deleting a contact object
             self.assertEqual(len(User.contact_list),1)  
+
+    def delete_contact(self):
+
+        '''
+        delete_contact method deletes a saved contact from the contact_list
+        '''
+
+        User.contact_list.remove(self)
+
 
     def test_find_contact_by_username(self):
         '''
