@@ -14,6 +14,7 @@ This application is used to save the emails, usernames,and passwords of any soci
 
 -Google chrome 
 -Visual studio code
+-Terminal
 
 #Contact
 -E-mail:mnuriath@gmail.com
