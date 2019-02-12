@@ -19,9 +19,9 @@ This application is used to save the emails, usernames,and passwords of any soci
 #Contact
 -E-mail:mnuriath@gmail.com
 
-#Contrubutor
+#Contributor
 
-
+-Mwangaza Nuriath,
 
 #Relative link:
 Link:https://github.com/nuriath/Password-Locker
