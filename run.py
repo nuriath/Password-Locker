@@ -31,7 +31,11 @@ def check_existing_contacts(username):
         Function that check if a contact exists with that username and return a Boolean
         '''
         return User.contact_exist(username)
-
+def display_contacts():
+    '''
+    Function that returns all the saved contacts
+    '''
+    return User.display_contacts()
 def main():
     print("Hello Welcome to your contact list. What is your name?")
     username = input()
