@@ -16,7 +16,7 @@ This application is used to save the emails, usernames,and passwords of any soci
 -Visual studio code
 
 #Contact
-E-mail:mnuriath@gmail.com
+-E-mail:mnuriath@gmail.com
 
 #Relative link:
 [relative link]
