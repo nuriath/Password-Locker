@@ -34,13 +34,12 @@ def check_existing_contacts(username):
 
 def main():
     print("Hello Welcome to your contact list. What is your name?")
+    username = input()
 
-            username = input()
+    print(f"Hello {username}. what would you like to do?")
+    print('\n')
 
-            print(f"Hello {username}. what would you like to do?")
-            print('\n')
-
-            while True:
+    while True:
                     print("Use these short codes : cc - create a new contact, dc - display contacts, fc -find a contact, ex -exit the contact list ")
 
                     short_code = input().lower()
@@ -49,18 +48,18 @@ def main():
                             print("New Contact")
                             print("-"*10)
 
-                            print("email ...")
-                            e_address = input()
+                            print ("email....")
+                            email = input()
 
-                            print ("username ....")
-                            f_name = input()
+                            print("username ...")
+                            username = input()
 
-                            print("password ...")
-                            l_name = input()
+                            print("password...")
+                            password = input()
 
                             save_contacts(create_contact(email,username,password)) # create and save new contact.
                             print ('\n')
-                            print(f"New Contact {email} {username} created")
+                            print(f"New User{email} {password} created")
                             print ('\n')
 
                     elif short_code == 'dc':
@@ -88,7 +87,7 @@ def main():
                                     print(f"{search_contact.email} {search_contact.password}")
                                     print('-' * 20)
 
-                                    print(f"username.......{search_contact.username}")
+                                    print(f" username.......{search_contact.username}")
                                     print(f"email.......{search_contact.email}")
                             else:
                                     print("That contact does not exist")
