@@ -34,7 +34,7 @@ class TestUser(unittest.TestCase):
          the contact list
         '''
         self.new_contact.save_contact() # saving the new contact
-        self.assertEqual(len(User.contact_list),1)
+        self.assertEqual(len(User.contact_list),4)
 
 # Items up here...
 
@@ -53,7 +53,7 @@ class TestUser(unittest.TestCase):
             self.new_contact.save_contact()
             test_contact = User("queen@gmail.com","kingdom","jquery2") # new contact
             test_contact.save_contact()
-            self.assertEqual(len(User.contact_list),2)
+            self.assertEqual(len(User.contact_list),6)
 
             # More tests above
     def test_delete_contact(self):

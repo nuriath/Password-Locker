@@ -28,7 +28,7 @@ class User:
         # Init method up here
     def save_contact(self): 
 
-        User
+
         '''
         save_contact method saves contact objects into contact_list
         '''
