@@ -1,9 +1,8 @@
+import pyperclip
 class User:
     """
-    Class that generates new instances of contacts
+    Class that generates new instances of contacts.
     """
-
-    pass
     contact_list = [] # Empty contact list
 
     def __init__(self,email,username,password):
@@ -65,4 +64,8 @@ class User:
         '''
         return cls.contact_list       
 
-        
+    @classmethod
+    def copy_email(cls,username):
+            contact_found = User.find_by_username(username)
+            pyperclip.copy(contact_found.email)
+            

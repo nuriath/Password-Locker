@@ -1,5 +1,5 @@
 import unittest # Importing the unittest module
-
+import pyperclip
 from contact import User # Importing the contact class
 
 class TestUser(unittest.TestCase):
@@ -34,7 +34,7 @@ class TestUser(unittest.TestCase):
          the contact list
         '''
         self.new_contact.save_contact() # saving the new contact
-        self.assertEqual(len(User.contact_list),4)
+        self.assertEqual(len(User.contact_list),5)
 
 # Items up here...
 
@@ -53,7 +53,7 @@ class TestUser(unittest.TestCase):
             self.new_contact.save_contact()
             test_contact = User("queen@gmail.com","kingdom","jquery2") # new contact
             test_contact.save_contact()
-            self.assertEqual(len(User.contact_list),6)
+            self.assertEqual(len(User.contact_list),7)
 
             # More tests above
     def test_delete_contact(self):
@@ -66,7 +66,7 @@ class TestUser(unittest.TestCase):
             test_contact.save_contact()
 
             self.new_contact.delete_contact()# Deleting a contact object
-            self.assertEqual(len(User.contact_list),1)  
+            self.assertEqual(len(User.contact_list),2)  
 
     def delete_contact(self):
 
@@ -97,7 +97,15 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(User.display_contacts(),User.contact_list)
 
+    def test_copy_email(self):
+        '''
+        Test to confirm that we are copying the email address from a found contact
+        '''
 
+        self.new_contact.save_contact()
+        User.copy_email("kingdom")
+
+        self.assertEqual(self.new_contact.email,pyperclip.paste())
 
 
 if __name__ == '__main__':
