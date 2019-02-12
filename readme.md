@@ -19,7 +19,7 @@ This application is used to save the emails, usernames,and passwords of any soci
 -E-mail:mnuriath@gmail.com
 
 #Relative link:
-[relative link]
+Link:https://github.com/nuriath/Password-Locker
 
 #License & Copyright
 (c) Mwangaza Nuriath, MIT License 2019.
